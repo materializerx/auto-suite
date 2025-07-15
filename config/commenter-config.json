@@ -1,6 +1,6 @@
 {
   "commenting": {
-    "maxCommentsPerRun": 5,
+    "maxCommentsPerRun": 1,
     "delayBetweenComments": 60,
     "maxCommentsPerDay": 720,
     "cooldownAfterRateLimit": 1800

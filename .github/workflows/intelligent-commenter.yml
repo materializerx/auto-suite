@@ -2,8 +2,8 @@ name: Intelligent Reddit Commenter
 
 on:
   schedule:
-    # Run every hour at :40 minutes  
-    - cron: '40 * * * *'
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
