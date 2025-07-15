@@ -1,0 +1,38 @@
+name: Intelligent Reddit Commenter
+
+on:
+  schedule:
+    # Run every hour at :40 minutes  
+    - cron: '40 * * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run intelligent commenter
+      env:
+        REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+        REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+        REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        REDDIT_BOT_REFRESH_TOKEN: ${{ secrets.REDDIT_BOT_REFRESH_TOKEN }}
+      run: npm run commenter
+      
+    - name: Log completion
+      run: echo "Intelligent commenter completed at $(date)"

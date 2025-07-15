@@ -1,0 +1,30 @@
+{
+  "name": "auto-suite",
+  "version": "1.0.0",
+  "description": "Reddit automation tools for content crawling and intelligent commenting",
+  "private": true,
+  "scripts": {
+    "crawler": "tsx scripts/crawler.ts",
+    "crawl-comprehensive": "tsx scripts/comprehensive-crawler.ts",
+    "commenter": "tsx scripts/intelligent-commenter.ts",
+    "setup-bot-oauth": "tsx scripts/setup-bot-oauth.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "tsx": "^4.16.5",
+    "typescript": "^5.7.3"
+  },
+  "keywords": [
+    "reddit",
+    "automation",
+    "crawler",
+    "ai",
+    "commenting"
+  ],
+  "author": "materializerx",
+  "license": "MIT"
+}

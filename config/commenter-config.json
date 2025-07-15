@@ -1,0 +1,32 @@
+{
+  "commenting": {
+    "maxCommentsPerRun": 5,
+    "delayBetweenComments": 60,
+    "maxCommentsPerDay": 720,
+    "cooldownAfterRateLimit": 1800
+  },
+  "postSelection": {
+    "minCommentCount": 10,
+    "maxPostAgeHours": 48,
+    "candidateBatchSize": 50,
+    "topCommentsToFetch": 20,
+    "excludeAutoreply": true
+  },
+  "qualityControl": {
+    "dryRunMode": false,
+    "maxCommentLength": 500,
+    "minCommentLength": 50,
+    "blacklistedKeywords": ["spam", "bot", "fake", "automatico"],
+    "requirePortuguese": true
+  },
+  "api": {
+    "requestTimeout": 10000,
+    "maxRetries": 3,
+    "batchDelay": 1000
+  },
+  "logging": {
+    "logLevel": "info",
+    "includeApiMetrics": true,
+    "includePerformanceMetrics": true
+  }
+}
