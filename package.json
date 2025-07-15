@@ -7,7 +7,8 @@
     "crawler": "tsx scripts/crawler.ts",
     "crawl-comprehensive": "tsx scripts/comprehensive-crawler.ts",
     "commenter": "tsx scripts/intelligent-commenter.ts",
-    "setup-bot-oauth": "tsx scripts/setup-bot-oauth.ts"
+    "setup-bot-oauth": "tsx scripts/setup-bot-oauth.ts",
+    "manual-oauth-setup": "tsx scripts/manual-oauth-setup.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
